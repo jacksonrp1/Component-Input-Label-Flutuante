@@ -9,7 +9,7 @@
 
 # Projeto Component Input Com Label Flutuante
 
-### <a href="https://jacksonrp1.github.io/Component-Input-Label-Flutuante">Clique aqui</a> para visualizar o projeto concluído.
+### <a href="https://jacksonrp1.github.io/Component-Input-Label-Flutuante/build/">Clique aqui</a> para visualizar o projeto concluído.
 
 #### Scripts Disponíveis
 

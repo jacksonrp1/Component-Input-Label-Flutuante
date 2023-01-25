@@ -5,9 +5,11 @@ import { FiEye, FiEyeOff } from 'react-icons/fi'
 export default function Input({
   tipoInput = 'text',
   label = 'Label',
+  obrigatorio = false,
   corCampoText = '#cfcfcf',
   corLabel = '#cfcfcf',
-  corEye = '#cfcfcf'
+  corEye = '#cfcfcf',
+  corLinhaBottom = '#cfcfcf'
 }) {
   const [tpInput, setTpInput] = useState(tipoInput)
   const [visivel, setVisivel] = useState(false)
@@ -19,7 +21,13 @@ export default function Input({
 
   return (
     <div className="Input">
-      <input type={tpInput} placeholder=" " style={{ color: corCampoText }} />
+      <input
+        type={tpInput}
+        placeholder=" "
+        style={{ color: corCampoText }}
+        required={obrigatorio}
+      />
+
       <p style={{ color: corLabel }}>{label}</p>
       {tipoInput === 'password' ? (
         <div onClick={handleEye} className="Input-Type">
@@ -32,7 +40,10 @@ export default function Input({
       ) : (
         ''
       )}
-      <div className="borderBottom"></div>
+      <div
+        className="borderBottom"
+        style={{ backgroundColor: corLinhaBottom }}
+      ></div>
     </div>
   )
 }
